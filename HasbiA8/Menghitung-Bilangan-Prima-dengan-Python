@@ -1,0 +1,28 @@
+# fungsi untuk mengecek bilangan prima
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+# input batas atas bilangan prima
+limit = int(input("Masukkan batas atas bilangan prima: "))
+
+# hitung dan tampilkan bilangan prima
+primes = []
+for i in range(2, limit+1):
+    if is_prime(i):
+        primes.append(i)
+print("Bilangan prima dari 2 hingga", limit, "adalah:", primes)
+
+========================================================================
+Penjelasan singkat mengenai program di atas:
+
+Pertama, kita mendefinisikan fungsi is_prime() untuk mengecek apakah suatu bilangan n prima atau tidak. Jika n kurang dari 2, maka bukan bilangan prima. Jika n dapat dibagi dengan bilangan selain 1 dan dirinya sendiri, maka bukan bilangan prima. Jika tidak, maka bilangan tersebut adalah bilangan prima.
+Selanjutnya, kita meminta input dari pengguna berupa batas atas bilangan prima yang ingin dicari.
+Kemudian, kita menggunakan loop untuk mengiterasi bilangan dari 2 hingga batas atas yang dimasukkan. Jika bilangan tersebut prima, maka kita tambahkan ke dalam daftar bilangan prima yang ditemukan.
+Terakhir, kita tampilkan daftar bilangan prima ke layar.
+Itulah contoh program Python sederhana untuk menghitung bilangan prima. Semoga bisa membantu!
+
